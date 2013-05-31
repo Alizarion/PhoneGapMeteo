@@ -1,5 +1,5 @@
 //Document ready = dom ready, window.load = avec images, etc...
-document.addEventListener('deviceready',function(){
+$(function(){
     $('#canvas').on('pagebeforeshow',function(){
         var drawer = {
             preDraw : function(e){
