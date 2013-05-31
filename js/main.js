@@ -171,6 +171,7 @@ document.addEventListener('deviceready',function(){
             }
 
             function displayMeteo(meteosArray){
+                $('#weekMeteo').html('');
                 $.each(meteosArray, function(i,item){
                     if(i==0){
 
@@ -190,7 +191,7 @@ document.addEventListener('deviceready',function(){
                                 break;
 
                         }
-                        $('#weekMeteo').html('');
+
                         $('#weekMeteo').append('<section id="item-'+lettre+'" class="ui-block-' +lettre+'" ><div><time datetime='+item.date+'>'+item.date+'</time></div><img src ='+ item.pix +' alt="meteo du jour" />' +
                             '<div><span>temp min : '+item.tempMin+'</span><span> Temp max : '+item.tempMax +'</span></div></section>');
                         $('#item-'+lettre).addClass('animated bounceIn') ;
